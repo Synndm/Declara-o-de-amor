@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vinda ao Nosso jardim do Amor ❤</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Mobile -->
+    <div class="menu-mobile">
+        <div class="menu-btn"><i class="fas fa-bars"></i></div>
+        <div class="menu-content">
+            <div onclick="rolarPara('razoes')"><i class="fas fa-heart"></i> Razões</div>
+            <div onclick="rolarPara('galeria')"><i class="fas fa-images"></i> Galeria</div>
+            <div onclick="rolarPara('contador')"><i class="fas fa-clock"></i> Tempo</div>
+        </div>
+    </div>
+
+    <!-- Player de Música -->
+    <div class="music-player">
+        <audio id="musica" loop>
+            <source src="assets/audio/musica.mp3" type="audio/mpeg">
+        </audio>
+        <button id="btn-musica"><i class="fas fa-music"></i> Tocar Música</button>
+    </div>
+
+    <!-- Toggle de Tema -->
+    <div class="theme-toggle" onclick="alternarTema()">
+        <span id="theme-icon"><i class="fas fa-moon"></i></span>
+    </div>
+
+    <!-- Seção Principal -->
+    <section id="inicio">
+        <h1>Nosso Jardim Secreto <i class="fas fa-heart"></i></h1>
+        <div class="flores">
+            <div class="flor" onclick="rolarPara('razoes')">
+                <i class="fas fa-heart"></i> Razões do Amor
+            </div>
+            <div class="flor" onclick="rolarPara('galeria')">
+                <i class="fas fa-camera"></i> Nossas Fotos
+            </div>
+            <div class="flor" onclick="rolarPara('contador')">
+                <i class="fas fa-clock"></i> Nosso Tempo
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Razões -->
+    <section id="razoes" class="secao">
+        <h2><i class="fas fa-heart"></i> Razões Por Que Te Amo</h2>
+        <div class="razoes">
+                <p>1. Você me faz sorrir mesmo nos dias difíceis.</p>
+                <p>2. Seu abraço é meu lugar favorito.</p>
+                <p>3. Amo o seu jeito criativo de fazer as coisas</p>
+                <p>4. A maneira que você explica os assuntos por menores que sejam</p>
+                <p>5. Amo que você se esforça pra alcançar seus objetivos</p>
+                <p>6. Você faz o chocolate perfeito pra mim</p>
+                <p>7. Você me faz querer superar cada desafio</p>
+                <p>8. Você me ensina a amar sem medo</p>
+                <p>9. Sua voz maravilhosa dá brilho nos meus olhos</p>
+                <p>10. Sua risada é o som estranhamente mais lindo que já ouvi</p>
+                <p>11. De todas as vezes que a gente conversa por ligação</p>
+                <p>12. Sua vontade de crescer fazendo o que gosta</p>
+                <p>13. Seu amor por mim</p>
+            <!-- Razões serão adicionadas via JavaScript -->
+        </div>
+        <button onclick="rolarPara('inicio')"><i class="fas fa-home"></i> Voltar</button>
+    </section>
+
+    <!-- Seção Galeria -->
+    <section id="galeria" class="secao">
+        <h2><i class="fas fa-images"></i> Nossos Momentos</h2>
+        <div class="galeria-container" id="galeria-container">
+            <!-- Fotos serão adicionadas via JavaScript -->
+        </div>
+        <button onclick="rolarPara('inicio')"><i class="fas fa-home"></i> Voltar</button>
+    </section>
+
+    <!-- Seção Contador -->
+    <section id="contador" class="secao">
+        <h2><i class="fas fa-clock"></i> Nosso Tempo Juntos</h2>
+        <div class="contador-container">
+            <div class="tempo-box">
+                <span id="anos">0</span>
+                <p>Anos</p>
+            </div>
+            <div class="tempo-box">
+                <span id="meses">0</span>
+                <p>Meses</p>
+            </div>
+            <div class="tempo-box">
+                <span id="dias">0</span>
+                <p>Dias</p>
+            </div>
+        </div>
+        <button onclick="rolarPara('inicio')"><i class="fas fa-home"></i> Voltar</button>
+    </section>
+
+    <!-- Modal de Fotos -->
+    <div id="modal" class="modal">
+        <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- Efeitos Visuais -->
+    <div id="petalas"></div>
+    <div id="coracoes"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

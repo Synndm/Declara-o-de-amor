@@ -1,0 +1,279 @@
+:root {
+    --cor-primaria: #ff6b8b;
+    --cor-secundaria: #ffb6c1;
+    --cor-texto: #333;
+    --cor-fundo: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --sombra: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    overflow-x: hidden;
+    background-image: url('./assets/fotos/fundao.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixa a imagem ao rolar */
+    margin: 0;
+    height: 100vh;
+}
+
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: var(--cor-primaria);
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Menu Mobile */
+.menu-mobile {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu-btn {
+    background: var(--cor-primaria);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: var(--sombra);
+    min-width: 200px;
+}
+
+.menu-content div {
+    margin: 10px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-content div:hover {
+    background: var(--cor-secundaria);
+    color: white;
+}
+
+/* Seções */
+.secao {
+    min-height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#razoes { background-color: rgba(255, 182, 193, 0.2); }
+#galeria { background-color: rgba(195, 207, 226, 0.2); }
+#contador { background-color: rgba(245, 247, 250, 0.5); }
+
+/* Flores */
+.flores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.flor {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    font-size: 1.2rem;
+}
+
+.flor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Galeria */
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.galeria-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: var(--sombra);
+}
+
+.galeria-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    display: block;
+    margin: 50px auto;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Contador */
+.contador-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.tempo-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 100px;
+    box-shadow: var(--sombra);
+}
+
+.tempo-box span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+/* Player de Música */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#btn-musica {
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: var(--sombra);
+}
+
+#btn-musica:hover {
+    background: #ff1493;
+}
+
+/* Toggle de Tema */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--cor-primaria);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: var(--sombra);
+}
+
+/* Botões */
+button {
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: var(--sombra);
+}
+
+button:hover {
+    background: #ff1493;
+    transform: translateY(-2px);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --cor-primaria: #ff8fab;
+    --cor-secundaria: #ffb3c6;
+    --cor-texto: #f1f1f1;
+    --cor-fundo: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .flores, .contador-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 { font-size: 2rem; }
+}
+
+/* Animações */
+@keyframes cair {
+    to { transform: translateY(110vh) rotate(360deg); }
+}
+
+@keyframes flutuar {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
